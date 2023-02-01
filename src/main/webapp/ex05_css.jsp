@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,28 +7,31 @@
 <title>$().css()</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <style type="text/css">
-	.red{background: red;}
-	 #box{
-	 	background: red;
-	 	width: 100px;
-	 	padding: 10px;
-	 }
-</style> 
+.red {
+	background: red;
+}
+
+#box {
+	background: red;
+	width: 100px;
+	padding: 10px;
+}
+</style>
 <script type="text/javascript">
-	$(document).ready(function(){
+	$(document).ready(function() {
 		// 자바스크립트 방식
-		document.getElementById("java").style.background="skyblue";
-		
+		document.getElementById("java").style.background = "skyblue";
+
 		// addClass 방식
 		$("#jsp").addClass("red");
-		
+
 		// css 적용
 		// var 변수 = $("선택자").css("속성") -> getter
 		// $("선택자").css("속성","값") -> setter
 		$("body>ul>li").css("background", "orange"); // 자식관계
 		$("body>ul li").css("color", "blue"); // 자손관계
-		
-		$("#box").click(function(){
+
+		$("#box").click(function() {
 			$("#box").css("width", "+=200").css("height", "200");
 		});
 	});
